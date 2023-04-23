@@ -14,7 +14,7 @@ public class Main {
                 for (int j = 0; j <= 4; j++) {
                     account.add(1);
                 }
-            }, "Deposit Thread " + (i + 1));
+            }, "add Thread " + (i + 1));
         }
 
         for (int i = 0; i < takeoutThreads.length; i++) {
@@ -22,7 +22,7 @@ public class Main {
                 for (int j = 0; j <= 5; j++) {
                     account.takeOut(1);
                 }
-            }, "Withdraw Thread " + (i + 1));
+            }, "takeout Thread " + (i + 1));
         }
         for (Thread thread : addThreads) {
             thread.start();
